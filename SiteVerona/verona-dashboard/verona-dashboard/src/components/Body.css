@@ -1,0 +1,115 @@
+.body-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .view-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin:20px;
+    
+  }
+  
+  .view-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .clients-list {
+    width: 700px; /* Defina a largura fixa */
+    max-height: 550px; /* Altura máxima para scroll */
+    overflow: auto; /* Adicione scroll quando necessário */
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .clients-list h2 {
+    margin-bottom: 10px;
+  }
+  
+  .clients-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .clients-list li {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .csv-btn {
+    margin-top: 20px; /* Espaçamento entre a lista e o botão */
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .delete-btn {
+    margin-top: 20px; /* Espaçamento entre a lista e o botão */
+    background-color: #cf2727;
+    margin-left: 20px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .delete-btn:hover{
+    background-color: #6e1111;
+  }
+  
+  .csv-btn:hover {
+    background-color: #1d8c39;
+  }
+
+.delete-div{
+    flex-direction: row;
+    align-items: center;
+}
+
+.bottom-div{
+    flex-direction: column;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+    padding-left: 50px;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}
+
+.icon:hover{
+    color: rgb(180, 1, 1);
+}
+
+.icon::after {
+    content: "Deletar todos clientes";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.479);
+    color: #fff;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.icon:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
